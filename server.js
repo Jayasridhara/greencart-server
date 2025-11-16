@@ -20,7 +20,7 @@ await connectDB();
 await connectCloudinary();
 
 //  Allow frontend origin
-const allowedOrigins = ['http://localhost:5173', baseurl]
+const allowedOrigins = ['http://localhost:5173',baseurl]
 
 //  Stripe webhook route MUST be defined BEFORE express.json() 
 app.post(
