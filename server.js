@@ -15,12 +15,12 @@ import { stripeWebhooks } from './controllers/orderController.js';
 
 const app = express();
 const port = process.env.PORT || 4000;
-
+const baseurl=process.env.BASE_URL;
 await connectDB();
 await connectCloudinary();
 
 //  Allow frontend origin
-const allowedOrigins = ['http://localhost:5173', 'https://greencart-gamma-teal.vercel.app']
+const allowedOrigins = ['http://localhost:5173', baseurl]
 
 //  Stripe webhook route MUST be defined BEFORE express.json() 
 app.post(
